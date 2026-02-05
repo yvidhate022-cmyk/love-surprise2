@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>For My Love ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     body {
       margin: 0;
@@ -13,25 +12,20 @@
       text-align: center;
       color: white;
     }
-
     h1 {
       margin-top: 40px;
       font-size: 2.5em;
     }
-
     .container {
       padding: 20px;
     }
-
     .countdown {
-      font-size: 1.4em;
+      font-size: 1.5em;
       margin-top: 30px;
     }
-
     .hidden {
       display: none;
     }
-
     .card {
       background: rgba(255, 255, 255, 0.2);
       border-radius: 20px;
@@ -39,7 +33,6 @@
       max-width: 350px;
       margin: 30px auto;
     }
-
     img {
       width: 100%;
       border-radius: 15px;
@@ -47,34 +40,27 @@
     }
   </style>
 </head>
-
 <body>
 
-  <!-- COUNTDOWN SECTION -->
   <div class="container" id="countdownSection">
     <h1>⏳ A Surprise Is Coming…</h1>
     <div class="countdown" id="countdown"></div>
   </div>
 
-  <!-- MAIN CONTENT (HIDDEN FIRST) -->
   <div class="container hidden" id="mainContent">
     <h1>Hey My Love ❤️</h1>
-
     <div class="card">
       <p>
-        From the moment you came into my life,  
-        everything became more beautiful.  
-        This page is just a small reminder  
+        From the moment you came into my life,
+        everything became more beautiful.
+        This page is just a small reminder
         of how special you are to me 💖
       </p>
-
-      <!-- CHANGE IMAGE NAME IF YOU WANT -->
       <img src="Snapchat-100321993.jpg" alt="My Love">
     </div>
   </div>
 
   <script>
-    // 🔴 SET YOUR SPECIAL DATE HERE (YYYY, MM-1, DD, HH, MM, SS)
     const targetDate = new Date(2026, 1, 14, 0, 0, 0).getTime();
 
     const timer = setInterval(() => {
@@ -94,51 +80,9 @@
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("countdown").innerHTML =
-        💖 ${days}d ${hours}h ${minutes}m ${seconds}s;
+        `💖 ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
   </script>
-<!-- ❤️ Floating Hearts Animation -->
-<div class="hearts"></div>
 
-<style>
-.hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.heart {
-  position: absolute;
-  bottom: -20px;
-  width: 20px;
-  height: 20px;
-  background: red;
-  transform: rotate(45deg);
-  animation: floatUp 6s linear infinite;
-}
-<script>
-/* HEART ANIMATION */
-setInterval(() => {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  const hearts = ["❤️","💖","💕","💘","💗"];
-heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (15 + Math.random() * 20) + "px";
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
-}, 500);
-</script>
-  
 </body>
 </html>
-
-    
